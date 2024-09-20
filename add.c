@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int is_number(const char s) {
+int is_number(const char *s) {
     for (int i = 0; s[i] != '\0'; i++) {
         if (!isdigit(s[i]) && s[i] != '-') {
             return 0;
@@ -11,7 +11,7 @@ int is_number(const char s) {
     return 1;
 }
 
-int main(int argc, charargv[]) {
+int main(int argc, char *argv[]) {
     if (argc != 3) {
         printf("ERROR; wrong number of arguments\n");
         return 1;
